@@ -1,17 +1,20 @@
 <!DOCTYPE html>
-<html>
-  <head>
-    <title>Instagram</title>
-    <meta name="viewport" content="width=device-width,initial-scale=1">
-    <%= csrf_meta_tags %>
-    <%= csp_meta_tag %>
+<html lang="">
+<head>
+  <title>Instagram</title>
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <%= csrf_meta_tags %>
+  <%= csp_meta_tag %>
 
-    <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
-    <%= javascript_importmap_tags %>
-  </head>
+  <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
+  <%= javascript_importmap_tags %>
+</head>
 
-  <body>
+<body>
 <%= render 'layouts/navbar' %>
-    <%= yield %>
-  </body>
+<div class="d-flex align-items-center justify-content-center mt-4">
+  <%= render 'story/stories_list' %>
+</div>
+<%= yield %>
+</body>
 </html>
